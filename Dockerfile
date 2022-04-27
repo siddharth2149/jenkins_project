@@ -1,12 +1,13 @@
-FROM ubuntu:18.04
+FROM ubuntu
 
-RUN apt-get update \
-    && apt install apache2 -y \
-    && rm /var/www/html/index.html
+RUN apt update -y \
+    && apt install apache2 -y
 
-COPY test.html /var/www/html/
+COPY test.html /var/www/html/index.html
 
 EXPOSE 80
-CMD ["echo", "Image Created"]
+#CMD service apache2 start
+
+CMD apachectl -D FOREGROUND
 
 
