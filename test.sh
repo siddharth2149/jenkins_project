@@ -1,7 +1,7 @@
 #!/bin/bash
 
-docker build -t webserver:project .
+image_name = webserver
 
-docker images
+docker build -t "$image_name" .
 
 
