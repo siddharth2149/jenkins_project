@@ -1,7 +1,7 @@
 #!/bin/bash
 
-image_name = webserver
+image_name=webserver
 
-docker build -t "$image_name" .
+docker build -t '$image_name' .
 
 
