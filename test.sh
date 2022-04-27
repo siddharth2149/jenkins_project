@@ -1,3 +1,6 @@
 #!/bin/bash
-tag = tag++
-docker build -t webserver:$(tag) .
+
+docker stop myapache2
+docker rm myapache2
+docker rmi webserver:latest
+docker build -t webserver .
