@@ -1,5 +1,3 @@
 #!/bin/bash
-
-docker build -t webserver .
-
-
+tag = tag++
+docker build -t webserver:$(tag) .
