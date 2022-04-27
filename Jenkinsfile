@@ -6,7 +6,7 @@ pipeline {
     stage('Docker Build') {
       agent any
       steps {
-        #sh 'cd /root/jenkins && sh test.sh'
+        //sh 'cd /root/jenkins && sh test.sh'
         sh 'docker build -t webserver .'
       }
     }
